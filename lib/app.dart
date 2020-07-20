@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:wetrac/providers/auth_provider.dart';
 import 'package:wetrac/screens/intro_screen.dart';
+import 'package:wetrac/screens/login_screen.dart';
 import 'package:wetrac/screens/splash_screen.dart';
 import 'package:provider/provider.dart';
 
@@ -87,7 +88,7 @@ class _MyAppState extends State<MyApp> {
         builder: (ctx, authResultSnapshot) =>
             authResultSnapshot.connectionState == ConnectionState.waiting
                 ? SplashScreen()
-                : HomeScreen(),
+                : LoginScreen(),
       );
     }
   }
